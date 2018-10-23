@@ -1,37 +1,22 @@
-// Enable flight power
-let flight = document.querySelector("#flight");
+// Single power enabler
 
-function flightHandlerFunction() {
-  flight.classList.remove('disabled')
-  flight.classList.add('enabled')
+function enablePower(event) {
+  let selector = event.target.id.split("-")[1]
+  let element = document.querySelector(`#${selector}`)
+  element.classList.remove("disabled")
+  element.classList.add("enabled")
 }
 
-document.querySelector("#activate-flight").addEventListener("click", flightHandlerFunction)
+// Enable flight power
+document.querySelector("#activate-flight").addEventListener("click", enablePower)
 
 // Enable mind reading power
-let mindReading = document.querySelector("#mindreading")
-
-function mindReadingFunction() {
-  mindReading.classList.remove('disabled')
-  mindReading.classList.add('enabled')
-}
-
-document.querySelector("#activate-mindreading").addEventListener("click", mindReadingFunction)
-
+document.querySelector("#activate-mindreading").addEventListener("click", enablePower)
 
 // Enable xray power
-let xray = document.querySelector("#xray")
-
-function xrayFunction() {
-  xray.classList.remove('disabled');
-  xray.classList.add('enabled');
-}
-
-document.querySelector("#activate-xray").addEventListener("click", xrayFunction)
+document.querySelector("#activate-xray").addEventListener("click", enablePower)
 
 // Enable all powers
-
-
 
 function enablePowers() {
   let powers = document.querySelectorAll('#powerList section')
