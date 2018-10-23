@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .articles {
+      display: flex;
+      flex-direction: row;
+    }
+    #article1 {
+      border: 1px solid greenyellow;
+      flex: 1;
+    }
+    #article2 {
+      border: 1px solid gray;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <label for="message">Message:</label>
+  <input type="text" name="message" id="message">
+  <div class="articles">
+    <article id="article1"></article>
+    <article id="article2"></article>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
